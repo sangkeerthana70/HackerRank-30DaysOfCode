@@ -13,16 +13,17 @@ namespace Day4
             // instantiate the Person class
             Person person = new Person(0);
             // set the new instance of person's age 
-            person.age = 18;
+            person.age = 10;
             // call the method inside Person class
-            person.yearPasses(person.age);
-            person.amIOld(person.age);
+            person.yearPasses();
+            person.amIOld();
 
             Person a = new Person(-1);
-            a.yearPasses(a.age);
+            a.yearPasses();
             
             Console.WriteLine("now a.age is: " + a.age);
-            a.amIOld(a.age);
+            a.amIOld();
+            
 
             
 

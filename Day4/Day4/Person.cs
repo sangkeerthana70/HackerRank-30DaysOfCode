@@ -20,32 +20,37 @@ namespace Day4
             else
             {
                 this.age = 0;
-                Console.WriteLine("Age is not valid, setting age to 0");
+                Console.WriteLine("Age is not valid, setting age to 0.");
+                
             }
             
         }
         // methods
 
-        public void yearPasses(int age)
+        public void yearPasses()
         {
             age++;
             Console.WriteLine("Age: " + age);
             
         }
 
-        public void amIOld(int age)
+        public void amIOld()
         {
-            if(age < 13)
+            Console.WriteLine("age passed to amIOld method: " + age);
+            if (age < 13)
             {
-                Console.WriteLine("You are young");
+                //Console.WriteLine("In less than 13");
+                Console.WriteLine("You are young.");
             }
-            if(age >=13 && age <= 18)
+            else if((age >=13) && (age < 18))
             {
-                Console.WriteLine("You are a teenager");
+                //Console.WriteLine("In teenager");
+                Console.WriteLine("You are a teenager.");
             }
             else
             {
-                Console.WriteLine("you are old");
+                //Console.WriteLine("In old age");
+                Console.WriteLine("you are old.");
             }
 
         }
