@@ -27,7 +27,7 @@ namespace Days1And2
             */
 
             // Day-1
-            int i = 4;
+            int i = 12;
             double d = 4.0;
             string s = "HackerRank ";
 
