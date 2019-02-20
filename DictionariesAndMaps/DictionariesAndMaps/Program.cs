@@ -12,7 +12,7 @@ namespace DictionariesAndMaps
         {
             Dictionary<string, int> phoneBook = new Dictionary<string, int>();
 
-            
+            /*
             phoneBook.Add("sam", 99912222);
             phoneBook.Add("harry", 12299933);
             phoneBook.Add("tom", 11122222);
@@ -31,14 +31,40 @@ namespace DictionariesAndMaps
                     Console.WriteLine("Not found");
                 }
 
+            }
+            */
 
+            var n = int.Parse(Console.ReadLine());
 
+            
 
+            for (var i = 0; i < n; i++)
+            {
+                var entry = Console.ReadLine().Split(' ');
+                var name = entry[0];
+                Console.WriteLine(name.GetType());
+                var phone = int.Parse(entry[1]);
+                Console.WriteLine(phone.GetType());
+                phoneBook.Add(name, phone);
+            }
+
+            foreach (var pair in phoneBook)
+            {
+                if (phoneBook.ContainsKey(pair.Key))
+                {
+                    Console.WriteLine(pair.Key + "=" + pair.Value);
+
+                }
+                else
+                {
+                    Console.WriteLine("Not found");
+                }
             }
 
 
 
-            
+
+
 
         }
     }
