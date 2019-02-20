@@ -11,10 +11,9 @@ namespace Day10
         static void Main(string[] args)
         {
             int number = 12;
-            int remainder = 0;
-            int quotient = 0;
             
-            
+
+
 
             //do
             //{
@@ -29,20 +28,26 @@ namespace Day10
             //}
             //while (!(number % 2 == 0));
 
-            remainder = number % 2;
-            quotient = number / 2;
-            Console.WriteLine("rem : " + remainder);
-            Console.WriteLine("quo : " + quotient);
+            int remainder = number % 2;
+            int quotient = number / 2;
 
+            Console.WriteLine("quo : " + quotient);
+            Console.WriteLine("rem : " + remainder);
+            int i = 0;
             while (true)
             {
                 
+                // Continue dividing the quotient by 2 until you get a quotient of zero
                 if (quotient != 0)
                 {
+                    Console.WriteLine("i: " + i);
+                    Console.WriteLine("quotient: " + quotient);
+                    
                     
                     quotient = quotient / 2;
 
-                    remainder = number % 2;
+                    remainder = quotient % 2;
+                    Console.WriteLine(quotient % 2);
                     Console.WriteLine("quo1 : " + quotient);
                     Console.WriteLine("rem1: " + remainder);
                     
@@ -50,7 +55,8 @@ namespace Day10
                 else
                 {
                     break;
-                } 
+                }
+                i++;
 
             }
                 
