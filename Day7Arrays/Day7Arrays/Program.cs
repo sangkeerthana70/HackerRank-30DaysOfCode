@@ -27,7 +27,7 @@ namespace Day7Arrays
             // i--
             // the last element(-1) in array 1 will be assigned to first element in the reversed array
             // eg: [1 2 3 4]
-            // new arrays's start index will be old array's length - 1 EG: reversedArr[len - i] = arr[i];
+            // reversed arrays's start index will be old array's length - 1 EG: reversedArr[len - i] = arr[i];
             // reversed element will be [4 3 2 1]
 
             //Console.WriteLine(arr.Length);
@@ -43,7 +43,7 @@ namespace Day7Arrays
             }
             Console.WriteLine("Copy reversed element into reversedArray");
             Console.WriteLine(String.Join(" ", reversedArr));
-            return reversedArr;
+            return reversedArr;                     
         }
     }
 }
