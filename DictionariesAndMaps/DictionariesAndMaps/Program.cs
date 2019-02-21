@@ -36,16 +36,17 @@ namespace DictionariesAndMaps
 
             var n = int.Parse(Console.ReadLine());
 
-            
 
+            // must continue reading lines until there is no more input.
             for (var i = 0; i < n; i++)
             {
-                var entry = Console.ReadLine().Split(' ');
-                var name = entry[0];
+                var input = Console.ReadLine().Split(' ');
+                Console.WriteLine(input.GetType());
+                var name = input[0];
                 Console.WriteLine(name.GetType());
-                var phone = int.Parse(entry[1]);
-                Console.WriteLine(phone.GetType());
-                phoneBook.Add(name, phone);
+                var phoneNum = int.Parse(input[1]);
+                Console.WriteLine(phoneNum.GetType());
+                phoneBook.Add(name, phoneNum);
             }
 
             foreach (var pair in phoneBook)
