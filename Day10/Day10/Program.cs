@@ -10,7 +10,7 @@ namespace Day10
     {
         static void Main(string[] args)
         {
-            int number = 12;
+            int number = 5;
             List<int> result = new List<int> ();
             int quotient = number;
             int remainder = 0;
@@ -28,8 +28,8 @@ namespace Day10
                 binary += result[result.Count - 1 - i]; 
             }
             Console.WriteLine(binary);
-            
 
+            CheckConsecutiveOnes(binary);
             /*
             int value = 12;
             string binary = Convert.ToString(value, 2);
@@ -37,6 +37,46 @@ namespace Day10
             */
         }
 
+        private static int CheckConsecutiveOnes(string binary)
+        {
+            //binary = "111011110";
+            Console.WriteLine(binary);
+            int count = 0;
+            int maxCount = 0;
+
+            for(var i = 0; i < binary.Length; i++)
+            {
+                Console.WriteLine("i: " + i);
+                Console.WriteLine("binary[i]: " + binary[i]);
+                //Console.WriteLine(binary[i].GetType());
+                //Console.WriteLine(binary[i] == '1');
+                if(binary[i] == '1')
+                {
+                    if(i == 0 || binary[i -1] == '1' || binary[i - 1] == '0')
+                    {
+                        count += 1;
+                    }
+                }
+
+                if(binary[i] == '0')
+                {
+                    if(count > maxCount)
+                    {
+
+                        maxCount = count;
+                        
+                        count = 0;
+                    }
+                    
+                }
+                Console.WriteLine("count: " + count);
+                Console.WriteLine("maxCount: " + maxCount);
+                
+               
+            }
+            Console.WriteLine("count: " + maxCount);
+            return maxCount;
+        }
 
 
 
