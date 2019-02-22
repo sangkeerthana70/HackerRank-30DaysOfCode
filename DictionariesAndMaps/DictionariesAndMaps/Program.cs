@@ -11,29 +11,6 @@ namespace DictionariesAndMaps
         static void Main(string[] args)
         {
             Dictionary<string, int> phoneBook = new Dictionary<string, int>();
-
-            /*
-            phoneBook.Add("sam", 99912222);
-            phoneBook.Add("harry", 12299933);
-            phoneBook.Add("tom", 11122222);
-            
-            foreach (var pair in phoneBook)
-            {
-                //Console.WriteLine("key = {0} value = {1} ", pair.Key, pair.Value);
-                Console.WriteLine("pair.key: " + pair.Key);
-                if (phoneBook.ContainsKey(pair.Key))
-                {
-                    Console.WriteLine( pair.Key + "=" + pair.Value);
-
-                }
-                else
-                {
-                    Console.WriteLine("Not found");
-                }
-
-            }
-            */
-
             var n = int.Parse(Console.ReadLine());
 
 
@@ -48,19 +25,21 @@ namespace DictionariesAndMaps
                 Console.WriteLine(phoneNum.GetType());
                 phoneBook.Add(name, phoneNum);
             }
-
-            foreach (var pair in phoneBook)
+            string query = string.Empty;
+            while ((query = Console.ReadLine()) != null)
             {
-                if (phoneBook.ContainsKey(pair.Key))
+                
+                if (phoneBook.ContainsKey(query))
                 {
-                    Console.WriteLine(pair.Key + "=" + pair.Value);
-
+                    Console.WriteLine(query + "=" + phoneBook[query]);
                 }
                 else
                 {
                     Console.WriteLine("Not found");
                 }
             }
+           
+           
 
 
 
