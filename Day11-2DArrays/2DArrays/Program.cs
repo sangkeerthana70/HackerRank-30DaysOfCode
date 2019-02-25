@@ -32,8 +32,10 @@ namespace TwoDArrays
             */
             int hourGlassSum = 0;
             int maxValue = int.MinValue;
-            for(var i = 0; i < a.GetLength(0) - 2; i++)
+            // Outer loop to get upto 4 rows 
+            for (var i = 0; i < a.GetLength(0) - 2; i++)
             {
+                // Inner loop to get upto 4 columns 
                 for (var j = 0; j < a.GetLength(1) - 2; j++)
                 {
                     Console.WriteLine("({0},{1})",i,j);
