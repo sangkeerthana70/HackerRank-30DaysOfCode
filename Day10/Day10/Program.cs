@@ -10,7 +10,7 @@ namespace Day10
     {
         static void Main(string[] args)
         {
-            int number = 13;
+            int number = 951;
             List<int> result = new List<int> ();
             int quotient = number;
             int remainder = 0;
@@ -24,6 +24,7 @@ namespace Day10
             string binary = string.Empty;
             for(var i = 0; i < result.Count; i++)
             {
+                // reverses the elements in 
                 binary += result[result.Count - 1 - i]; 
             }
 
@@ -45,10 +46,10 @@ namespace Day10
 
             for(var i = 0; i < binary.Length; i++)
             {
-                //Console.WriteLine("i: " + i);
-                //Console.WriteLine("binary[i]: " + binary[i]);
-                //Console.WriteLine(binary[i].GetType());
-                //Console.WriteLine(binary[i] == '1');
+                Console.WriteLine("i: " + i);
+                Console.WriteLine("binary[i]: " + binary[i]);
+                Console.WriteLine(binary[i].GetType());
+                Console.WriteLine(binary[i] == '1');
                 if(binary[i] == '1')
                 {
                     count += 1;
