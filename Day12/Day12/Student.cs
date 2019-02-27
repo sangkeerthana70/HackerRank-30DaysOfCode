@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Day12
 {
+    // Student inherits Person class
     public class Student: Person
     {
-        public string firstName;
-        public string lastName;
-        public int id;
+        //public string firstName;
+        //public string lastName;
+        //public int id;
         public int[] testScores;
         
         public Student(int [] ts)
