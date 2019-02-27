@@ -56,7 +56,11 @@ namespace TwoDArrays
             }
             Console.WriteLine("maxSum: " + maxValue);
             */
+
             // defines a array of arrays
+            // The elements of a jagged array can be of different dimensions and sizes. 
+            // A jagged array is sometimes called an "array of arrays.
+
             int[][] arr = new int[6][];
 
             for (int i = 0; i < 6; i++)
@@ -65,16 +69,18 @@ namespace TwoDArrays
             }
             int hourGlassSum = 0;
             int maxValue = int.MinValue;
+            // Outer loop to increment the row count upto 4 rows
             for (var i = 0; i < arr.Length - 2; i++)
             {
                 // Inner loop to get upto 4 columns 
+                
                 for (var j = 0; j < arr[i].Length - 2; j++)
                 {
                     //Console.WriteLine("({0},{1})",i,j);
                     hourGlassSum = arr[i][j] + arr[i][j + 1] + arr[i][j + 2];
                     hourGlassSum += arr[i + 1][j + 1];
                     hourGlassSum += arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
-                    //Console.WriteLine(hourGlassSum);
+                    Console.WriteLine(hourGlassSum);
                     if (hourGlassSum > maxValue)
                     {
                         maxValue = hourGlassSum;
