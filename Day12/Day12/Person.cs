@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Day12
 {  
-    class Person
+    public class Person
     {
-        protected string firstName;
-        protected string lastName;
-        protected int id;
+        public string firstName;
+        public string lastName;
+        public int id;
 
         public Person() { }
         public Person(string firstName, string lastName, int identification)
