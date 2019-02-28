@@ -9,14 +9,11 @@ namespace Day12
     // Student inherits Person class
     public class Student: Person
     {
-        //public string firstName;
-        //public string lastName;
-        //public int id;
-        public int[] testScores;
-        
-        public Student(int [] ts)
+        private int[] testScores;
+        // student constructor is called at instantiation and first the base class's property is set along with child class's specific property
+        public Student(string fN, string lN, int id, int[] testScores): base(fN, lN, id)
         {
-            this.testScores = ts;
+            this.testScores = testScores;
         }
 
         public char Calculate()
