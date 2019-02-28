@@ -11,12 +11,11 @@ namespace Day12
         static void Main(string[] args)
         {
             int[] testScores = new int[] { 100, 50, 70, 60, 80, 60 };
-            Student s = new Student(testScores);
+
             // since student inherits person class it has inherited all the properties of the person class
-            // and accessed here while instantiating
-            s.firstName = "Ritika";
-            s.lastName = "Charan";
-            s.id = 3648762;
+            // including the properties specific to the student(child) class
+            // and accessed here while instantiating 
+            Student s = new Student("Ritika", "Charan", 3648762, testScores);
 
             s.Calculate();
 
