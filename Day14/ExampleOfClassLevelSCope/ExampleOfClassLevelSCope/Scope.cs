@@ -25,6 +25,7 @@ namespace ExampleOfClassLevelSCope
             x = 4.4; // reassign value of local variable x2
             Console.WriteLine("New value of Local Variable `x`: " + x + "\n");
 
+
             for (int b = 0; b < 4; b++)
             { // b2 has scope of this loop
                 int i = b + 4; // begin scope of int i
