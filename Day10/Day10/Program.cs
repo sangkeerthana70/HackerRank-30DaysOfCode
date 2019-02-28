@@ -18,14 +18,17 @@ namespace Day10
             {               
                // Continue dividing the quotient by 2 until you get a quotient of zero
                 remainder = quotient % 2;
+                Console.WriteLine("remainder: " + remainder);
                 quotient = quotient / 2;
                 result.Add(remainder);                                       
             }
+            Console.WriteLine("result: " + result);
             string binary = string.Empty;
             for(var i = 0; i < result.Count; i++)
             {
-                // reverses the elements in 
-                binary += result[result.Count - 1 - i]; 
+                // reverses the elements in result array
+                binary += result[result.Count - 1 - i];
+                Console.WriteLine("binary: " + binary);
             }
 
 
