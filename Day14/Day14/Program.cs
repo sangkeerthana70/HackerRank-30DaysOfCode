@@ -13,7 +13,7 @@ namespace Day14
             int[] arr = new int[] { 1, 2, 3 };
             Difference d = new Difference(arr);
             d.computeDifference();
-
+            d.classVariable();
         }
     }
 }
