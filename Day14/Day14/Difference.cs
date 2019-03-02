@@ -16,8 +16,6 @@ namespace Day14
         public Difference(int [] e)
         {
             this.elements = e;
-            
-
         }
         // method to find the max difference
         public void computeDifference()
@@ -44,8 +42,14 @@ namespace Day14
                     //Console.WriteLine("maxDiff: " + maximumDifference);
                 } 
             }
-            //Console.WriteLine("maximumDifference: " + maximumDifference);
+            Console.WriteLine("maximumDifference: " + maximumDifference);
         }
 
+        public void classVariable()
+        {
+            Console.WriteLine("----- classVariable():\n"
+                + "Instance Variable `maximumDifference`: " + maximumDifference + "\n");
+
+        }
     }
 }
