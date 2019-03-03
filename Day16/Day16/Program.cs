@@ -11,8 +11,17 @@ namespace Day16
         static void Main(string[] args)
         {
             string S = Console.ReadLine();
-            int convertToInt = int.Parse(S);
-            Console.WriteLine(convertToInt);
+            
+
+            try
+            {
+                int convertToInt = int.Parse(S);
+                Console.WriteLine(convertToInt);
+            }
+            catch(System.FormatException e)
+            {
+                Console.WriteLine("Bad String");
+            }
         }
     }
 }
