@@ -9,8 +9,32 @@ namespace Day18
     class Solution
     {
         //Write your code here
+        Queue<char> myQueue = new Queue<char>();
+        Stack<char> myStack = new Stack<char>();
 
+        public void pushCharacter(char c)
+        {
 
+            myStack.Push(c);
+        }
+
+        public void enqueueCharacter(char c)
+        {
+            myQueue.Enqueue(c);
+        }
+
+        public char popCharacter()
+        {
+            // return the character that was popped
+            return myStack.Pop();
+        }
+
+        public char dequeueCharacter()
+        {
+            // return the character that was dequeued
+            return myQueue.Dequeue();
+
+        }
 
 
         static void Main(string[] args)
@@ -35,6 +59,10 @@ namespace Day18
             // compare both the characters.
             for (int i = 0; i < s.Length / 2; i++)
             {
+                //char popStack = obj.popCharacter();
+                //char popQu = obj.dequeueCharacter();
+                //Console.WriteLine("obj.popCharacter: " + popStack);
+                //Console.WriteLine("obj.dequeueCharacter: " + popQu);
                 if (obj.popCharacter() != obj.dequeueCharacter())
                 {
                     isPalindrome = false;
