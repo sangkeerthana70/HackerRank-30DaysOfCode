@@ -16,7 +16,7 @@ namespace Day20
 
             // Write Your Code Here
             bubbleSort(a, n);
-            Console.WriteLine("Sorted array");
+            
         }
 
        
@@ -28,11 +28,13 @@ namespace Day20
 
             for (int i = 0; i < n; i++)
             {
-                
+                Console.WriteLine("Loop i: " + i);
 
                 for (int j = 0; j < n - 1; j++)
                 {
                     Console.WriteLine("Loop J: " + j);
+                    Console.WriteLine("a[j]: " + a[j]);
+                    Console.WriteLine("a[j + 1]: " + a[j + 1]);
                     // Swap adjacent elements if they are in decreasing order
                     if (a[j] > a[j + 1])
                     {
@@ -55,8 +57,8 @@ namespace Day20
                 }
 
             }
-
-            foreach(var snum in a)
+            Console.WriteLine("Sorted array");
+            foreach (var snum in a)
             {
                 Console.WriteLine("Each Elem: " + snum);
             }
