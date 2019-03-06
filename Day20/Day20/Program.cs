@@ -63,22 +63,11 @@ namespace Day20
                 Console.WriteLine("Each Elem: " + snum);
             }
 
-            Console.WriteLine("Array is sorted in {0} swaps. " , numberOfSwaps);
-            //Console.WriteLine("noOfSwaps: " + numberOfSwaps);
-           
-            Console.WriteLine("First Element: {0} " + a[0]);
-            Console.WriteLine("Last Element: {0}" + a[a.Length-1]);
+            Console.WriteLine("Array is sorted in " + numberOfSwaps + " swaps.");
+            Console.WriteLine("First Element: " + a[0]);
+            Console.WriteLine("Last Element: " + a[a.Length - 1]);
         }
 
-        private static void PrintArray(int [] sortedArr)
-        {
-            for(var i = 0; i < sortedArr.Length -1; i++)
-            {
-                
-            }
-
-           
-
-        }
+        
     }
 }
