@@ -23,7 +23,10 @@ namespace Day21
             {
                 stringArray[i] = Console.ReadLine();
             }
-            
+
+            PrintArray<Int32>(intArray);
+            PrintArray<String>(stringArray);
+
         }
 
 
@@ -34,7 +37,14 @@ namespace Day21
         **/
         // Write your code here*/
 
-       
+        public static void PrintArray<T>(T[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+        }
+
 
     }
 
