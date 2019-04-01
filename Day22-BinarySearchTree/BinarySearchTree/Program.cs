@@ -25,8 +25,36 @@ namespace BinarySearchTree
         static int getHeight(Node root)
         {
             //Write your code here
+            /*
             if (root == null) return -1;
             return (1 + Math.Max(getHeight(root.left), getHeight(root.right)));
+            */
+
+            int height = 0;
+
+            if (root == null)
+                return -1;
+
+            int left = getHeight(root.left);
+           
+            int right = getHeight(root.right);
+
+            if (left > right)
+            {
+                height = 1 + left;
+                Console.WriteLine("In If: " + height);
+            }
+            else
+            {
+                height = 1 + right;
+                Console.WriteLine("In else:  " + height);
+            }
+
+
+
+            //return Math.Max(left, right);
+            return height;
+
         }
 
         static Node insert(Node root, int data)
