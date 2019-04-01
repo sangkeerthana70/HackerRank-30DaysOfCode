@@ -42,16 +42,13 @@ namespace BinarySearchTree
             if (left > right)
             {
                 height = 1 + left;
-                Console.WriteLine("In If: " + height);
+                Console.WriteLine("In if: " + height);
             }
             else
             {
                 height = 1 + right;
                 Console.WriteLine("In else:  " + height);
             }
-
-
-
             //return Math.Max(left, right);
             return height;
 

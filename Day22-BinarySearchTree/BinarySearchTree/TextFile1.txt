@@ -1,4 +1,4 @@
-﻿// old solution refer how to insert node into a Binary search tree manually.       
+﻿// old solution : refer how to insert node into a Binary search tree.       
 	   
 	   static void Main(string[] args)
         {
