@@ -50,8 +50,6 @@ namespace Day_23
 
             //use Queue data structure to traverse the binary tree and print the nodes
             Queue<Node> myQ = new Queue<Node>();
-            //Node currNode;
-
             if (root == null)
             {
                 return;
@@ -64,12 +62,11 @@ namespace Day_23
             // while queue is not empty and has at least one node in it
             while (myQ.Count > 0)
             {
-                var nodeInFrontOfQueue = myQ.Peek();
-                //Console.WriteLine(nodeInFrontOfQueue.GetType());
+                // peek at the node in the front of the queue to print its value
+                Node nodeInFrontOfQueue = myQ.Peek();               
                 Console.Write(nodeInFrontOfQueue.data + " ");
-                //currNode = myQ.Dequeue();
-                //Console.WriteLine("Visit current node and print its value: " + currNode.data);
-
+                
+                // enqueue its children
                 if (nodeInFrontOfQueue.left != null)
                 {
                     myQ.Enqueue(nodeInFrontOfQueue.left);
@@ -78,6 +75,7 @@ namespace Day_23
                 {
                     myQ.Enqueue(nodeInFrontOfQueue.right);
                 }
+                // finally dequeue the first node in the queue
                 myQ.Dequeue();
                 //Console.WriteLine("No of elements in the queue: {0}", myQ.Count);
 
