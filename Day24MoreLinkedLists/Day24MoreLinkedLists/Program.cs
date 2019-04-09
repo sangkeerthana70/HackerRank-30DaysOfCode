@@ -18,6 +18,7 @@ namespace Day24MoreLinkedLists
                 head = insert(head, data);
             }
             head = removeDuplicates(head);
+            Console.WriteLine("res: " + head.data);
             display(head);
         }
 
@@ -51,12 +52,31 @@ namespace Day24MoreLinkedLists
             }
         }
 
+        
         public static Node removeDuplicates(Node head)
         {
             //Write your code here
+            Node current = head;
             
+            while(current != null && current.next != null)
+            {
+                Node relink;
+                if(current.data == current.next.data)
+                {
+                    relink = current.next.next;
+                    current.next = relink;
+                }
+                else
+                {
+                    current = current.next;
+                }
+                
+
+            }
+            return head;
 
         }
+        
 
     }
 
