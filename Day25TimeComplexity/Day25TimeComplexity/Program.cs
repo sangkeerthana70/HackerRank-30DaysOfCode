@@ -10,20 +10,27 @@ namespace Day25TimeComplexity
     {
         static void Main(string[] args)
         {
-            int n = 12;
-            string result = FindIsPrime(n);
-            Console.WriteLine("result: " + result);
+           
+            int T = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("t: " + T);
+            for(int i = 0; i < T; i++)
+            {
+                int n = Convert.ToInt32(Console.ReadLine());
+                //Console.WriteLine("n: " + n);
+                string result = FindIsPrime(n);
+                Console.WriteLine("result: " + result);
+            }
+
         }
         public static string FindIsPrime(int n)
         {
            
             for(int i = 2; i < n; i++)
             {
-                Console.WriteLine("i : " + i);
+  
                 if(n % i == 0)
                 {
-                    Console.WriteLine("n%i: " + n%i);
-                    Console.WriteLine("Not prime");
+                    
                     return "Not prime";
                 }
                 
